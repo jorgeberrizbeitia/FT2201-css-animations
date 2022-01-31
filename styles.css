@@ -46,3 +46,129 @@ h2 {
 #charmander {
   background-color: salmon;
 }
+
+.card button {
+  background-color: lightgray;
+  padding: 20px;
+  border-radius: 20px;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.card button:hover {
+  opacity: 0.8;
+}
+
+.card button:active {
+  transform: scale(0.8);
+  transition-duration: 0.2s;
+}
+
+
+
+/* BULBASAUR */
+
+#bulbasaur:hover img {
+  /* transform: scale(1.4) translateY(-30px); */
+  /* transform: translateY(-30px); */
+  transform: rotate(-360deg);
+
+  transition-duration: 1s;
+  transition-delay: 0.3s; /* para agregar delay a la animacion */
+}
+
+
+
+/* CHARMANDER */
+
+/* esto es crear la animation */
+@keyframes colorAnimation {
+
+  0% {
+    background-color: salmon;
+  }
+
+  25% {
+    background-color: red;
+  }
+
+  50% {
+    background-color: purple;
+  }
+
+  75% {
+    background-color: crimson;
+  }
+
+  100% {
+    background-color: salmon;
+  }
+
+}
+
+#charmander:hover {
+  /* aplicar la animacion */
+  animation-name: colorAnimation;
+  animation-duration: 0.5s;
+
+}
+
+
+/* ocultar el charizard */
+
+#poke2 {
+  display: none;
+}
+
+#charmander:hover #poke1 {
+  display: none;
+}
+
+#charmander:hover #poke2 {
+  display: block;
+}
+
+
+/* SQUIRTLE */
+
+@keyframes complexAnimation {
+
+  5% {
+    transform: rotate(10deg);
+  }
+
+  10% {
+    background-color: lightgreen;
+    transform: rotate(0deg);
+  }
+
+  15% {
+    transform: rotate(-10deg);
+  }
+  
+  25% {
+    background-color: lightgoldenrodyellow;
+    transform: rotate(0deg);
+  }
+
+  40% {
+    transform: translateY(20px);
+    background-color: lightseagreen;
+  }
+
+  100% {
+    transform: scale(1.2);
+  }
+
+}
+
+#squirtle:hover {
+  animation-name: complexAnimation;
+  animation-duration: 1.5s;
+  transform: scale(1.2);
+}
+
+
+
